@@ -1,0 +1,77 @@
+package virtualpetshelter;
+
+import java.util.Scanner;
+
+public class VirtualPetShelter {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("Welcome to Virtual Pet Shelter!");
+		System.out.println("Please enter a name for your new pet: ");
+		String petname = input.nextLine();
+		
+		System.out.println("What type of animal is " + petname + "? You can choose a dog, cat, bunny, or a snake.");
+		String pettype = input.nextLine();
+		
+				VirtualPet newpet = new VirtualPet (petname, pettype);
+
+				newpet.displayStats();				
+				int random = (30 + (int)(Math.random()* 46));
+				int random1 = ((int)(Math.random()* 2));
+				int random2 = ((int)(Math.random()* 2));
+				int random3 = ((int)(Math.random()* 5));
+
+				for(int i = 0; i <random; i++){
+
+				//sick or happiness loss or hunger loss
+				if (random1 == 0){
+				//happiness minus 1;
+				System.out.println(petname + " lost a happiness point!");}
+				if (random2 == 1){
+				//hunger minus 1
+				System.out.println(petname + " lost a hunger point!");}
+				if (random3 == 2){
+				//sick = true;
+				System.out.println(petname + " is sick!");}
+
+				
+				System.out.println("Would you like to feed your pet? enter 0 for no, 1 for yes.");
+				int a = input.nextInt();
+				if (a == 1){
+				System.out.println("You fed " + petname + " some treats!");
+				
+				
+				}
+
+				
+				System.out.println("Would you like to feed your pet a snack? enter 0 for no, 1 for yes.");
+				int b = input.nextInt();
+				if (b == 1){
+				System.out.println("You fed " + petname + " a apple!");
+				
+				}
+
+				System.out.print("Would you like to play with your pet? enter 0 for no, 1 for yes.");
+				int c = input.nextInt();
+				if (c == 1){
+				System.out.println("You played hide and go seek with " + petname + "!");
+				
+				}
+
+				
+				System.out.println("would you like to give your pet some medicine? 0 for no, 1 for yes.");
+				int d = input.nextInt();
+				if (d == 1){
+				System.out.println("You gave your pet some medicine.");
+				
+				}
+				//display current stats
+				newpet.displayStats();
+				//prompt user to continue playing or quit
+
+				}
+				System.out.println("R.I.P. " + petname + ". It died after being neglected.");
+				}
+				
+			
