@@ -1,0 +1,19 @@
+package virtualpetshelter;
+
+public class VirtualPet {
+
+	public VirtualPet(String petname, String pettype) {
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+	public void displayStats() {
+		
+		
+	}
+
+}
